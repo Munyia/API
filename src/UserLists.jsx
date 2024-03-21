@@ -15,7 +15,14 @@ const UserLists = () => {
  
   return (
     <div>
-       <p>{listOfUsers && listOfUsers[0].name}</p>
+     {error && <p>Error: {error}</p>}
+            <ul>
+                {listOfUsers.map(user => (
+                    <li key={user.id}>
+                        <strong>{user.name}</strong> - {user.email}
+                    </li>
+                ))}
+            </ul>
     </div>
   )
 }
