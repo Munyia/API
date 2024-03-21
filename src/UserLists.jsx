@@ -16,13 +16,15 @@ const UserLists = () => {
   return (
     <div>
      {error && <p>Error: {error}</p>}
-            <ul>
+            <div className='user'>
                 {listOfUsers.map(user => (
-                    <li key={user.id}>
-                        <strong>{user.name}</strong> - {user.email}
-                    </li>
+                    <div id='use'>
+                       <h1>{user.id}</h1>
+                       <h2>{user.name}</h2>
+                       <h3> {user.email} </h3> 
+                       </div>
                 ))}
-            </ul>
+            </div>
     </div>
   )
 }
